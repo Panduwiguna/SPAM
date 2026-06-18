@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 def train_and_get_model():
     # Pastikan file SMSSpamCollection ada di folder utama Github Anda
     # Membaca data dataset asli
-    df = pd.read_csv('SMSSpamCollection', sep='\t', names=['label', 'sms'])
+    df = pd.read_txt('SMSSpamCollection', sep='\t', names=['label', 'sms'])
     df['label_num'] = df['label'].map({'ham': 0, 'spam': 1})
     
     X = df['sms']
